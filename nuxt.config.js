@@ -1,3 +1,4 @@
+const webpack = require("webpack")
 
 module.exports = {
   mode: 'universal',
@@ -59,10 +60,24 @@ module.exports = {
   */
   build: {
     transpile: [/^element-ui/],
+    vendor: ["jquery", "bootstrap"],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery"
+      })
+    ],
     /*
-    ** You can extend webpack config here
+    ** Run ESLint on save
     */
-    extend (config, ctx) {
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/
+        });
+      }
     }
   }
 }
