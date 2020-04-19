@@ -38,7 +38,9 @@ module.exports = {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // Styles
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Nuxt.js modules
@@ -56,6 +58,14 @@ module.exports = {
     // Fonts
     'nuxt-webfontloader'
   ],
+  /*
+   ** Styles
+  */
+  styleResources: {
+    sass: [
+      '@/assets/stylesheets/variables/*.sass'
+    ]
+  },
   /*
    ** Fonts
   */
