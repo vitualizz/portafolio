@@ -16,11 +16,13 @@ export default {
   mounted () {
     new TypeIt('.text', {
       strings: [
-        '@lee.develop',
+        'Lee Palacios',
         'Desarrollador Web',
-        'Yo ❤️  Tecnologia'
+        'Yo ❤️  Tecnologia',
+        '@vitualizz'
       ],
       loop: true,
+      nextStringDelay: 1500,
       breakLines: false
     }).go()
   }
@@ -29,7 +31,7 @@ export default {
 
 <style scoped lang='sass'>
 .logo-img
-  border-radius: 100%
+  border-radius: 100px
   width: 30vh
 .text
   margin-top: 20px
