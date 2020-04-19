@@ -3,13 +3,17 @@
     .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
       Intro
     .section
+      Info
 </template>
 
 <script>
 import Intro from '@/components/home/Intro.vue'
+import Info from '@/components/home/Info.vue'
+
 export default {
   components: {
-    Intro
+    Intro,
+    Info
   },
   data () {
     return {

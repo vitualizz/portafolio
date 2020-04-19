@@ -51,6 +51,8 @@ module.exports = {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // Devices,
+    '@nuxtjs/device',
     // FullPage
     'nuxt-fullpage.js',
     // Bulma
