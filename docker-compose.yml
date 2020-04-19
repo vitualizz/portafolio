@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: npm run dev
+    volumes:
+      - .:/portafolio
+      - ./node_modules:/portafolio/node_modules
+      - ~/.ssh:/root/.ssh
+      - ~/.gitconfig:/root/.gitconfig
+    ports:
+      - "5000:5000"
+    environment:
+      HOST: 0.0.0.0
