@@ -50,8 +50,20 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // FullPage
-    'nuxt-fullpage.js'
+    'nuxt-fullpage.js',
+    // Bulma
+    '@nuxtjs/bulma',
+    // Fonts
+    'nuxt-webfontloader'
   ],
+  /*
+   ** Fonts
+  */
+  webfontloader: {
+    google: {
+      families: ['Manjari:100,400,700'] //Loads Lato font with weights 400 and 700
+    }
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -69,6 +81,13 @@ module.exports = {
         $: "jquery"
       })
     ],
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
+    },
     /*
     ** Run ESLint on save
     */
