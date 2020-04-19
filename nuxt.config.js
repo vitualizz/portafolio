@@ -30,7 +30,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    { src: '@/plugins/fullpage', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,7 +50,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // FullPage
-    'fullpage-nuxt'
+    'nuxt-fullpage.js'
   ],
   /*
   ** Axios module configuration
