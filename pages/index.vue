@@ -4,16 +4,19 @@
       Intro
     .section.info
       Info
+    .section
+      Skills
 </template>
 
 <script>
 import Intro from '@/components/home/Intro.vue'
 import Info from '@/components/home/Info.vue'
-
+import Skills from '@/components/home/Skills.vue'
 export default {
   components: {
     Intro,
-    Info
+    Info,
+    Skills
   },
   data () {
     return {
