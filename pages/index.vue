@@ -2,7 +2,7 @@
   full-page(ref='fullpage' :options='options')
     .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
       Intro
-    .section
+    .section.info
       Info
 </template>
 
@@ -30,4 +30,11 @@ export default {
   background-size: cover
   background-position: bottom
   background-repeat: no-repeat
+.info
+  height: 100%
+  padding: 0
+  .fp-tableCell
+    padding: 0
+    margin: 0
+    display: flex
 </style>

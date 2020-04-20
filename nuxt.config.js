@@ -87,7 +87,7 @@ module.exports = {
   */
   build: {
     transpile: [/^element-ui/],
-    vendor: ["jquery", "bootstrap"],
+    vendor: ["jquery"],
     plugins: [
       new webpack.ProvidePlugin({
         $: "jquery"
