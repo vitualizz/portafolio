@@ -31,7 +31,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
-    { src: '@/plugins/fullpage', mode: 'client' }
+    { src: '@/plugins/fullpage', mode: 'client' },
+    { src: '@/plugins/chart', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -40,7 +41,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Styles
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    // FontAwesome
+    '@nuxtjs/fontawesome'
   ],
   /*
   ** Nuxt.js modules
@@ -61,11 +64,21 @@ module.exports = {
     'nuxt-webfontloader'
   ],
   /*
+   ** Font Awesome
+  */
+  fontawesome: {
+    icons: {
+      solid: ['faEnvelope'],
+      brands: ['faFacebook', 'faInstagram', 'faMedium', 'faWhatsapp']
+    }
+  },
+  /*
    ** Styles
   */
   styleResources: {
     sass: [
-      '@/assets/stylesheets/variables/*.sass'
+      '@/assets/stylesheets/variables/*.sass',
+      '@/assets/stylesheets/base.sass'
     ]
   },
   /*
@@ -73,7 +86,7 @@ module.exports = {
   */
   webfontloader: {
     google: {
-      families: ['Manjari:100,400,700'] //Loads Lato font with weights 400 and 700
+      families: ['Manjari:100,400,700']
     }
   },
   /*

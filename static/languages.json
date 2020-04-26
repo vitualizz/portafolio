@@ -1,0 +1,17 @@
+{
+  "Ruby": "#E3494F",
+  "Vue.js": "#7ABA69",
+  "HTML": "#E55C28",
+  "Haml": "#ECE2A9",
+  "JavaScript": "#F7DF1F",
+  "CoffeeScript": "#657C9E",
+  "Docker": "#59B9EB",
+  "YAML": "#B291D0",
+  "Sass": "#CC6699",
+  "Text": "#C6D8EF",
+  "VimL": "#549434",
+  "Git Config": "#E89BD4",
+  "JSON": "#F2CAE0",
+  "Other": "#A5A5A5",
+  "ERB": "#D8D8D8"
+}

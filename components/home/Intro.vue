@@ -37,7 +37,6 @@ export default {
   margin-top: 20px
   letter-spacing: 3px
   color: $color-blank
-  font-family: $font-manjari
   font-weight: $weight-bold
   font-size: 2rem
 </style>

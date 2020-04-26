@@ -17,9 +17,6 @@
 </template>
 
 <style scoped lang='sass'>
-p
-  font-family: $font-manjari
-  letter-spacing: 1.4px
 .t1
   font-weight: $weight-bold
   font-size: 10vh

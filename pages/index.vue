@@ -6,20 +6,28 @@
       Info
     .section
       Skills
+    .section.socials
+      Socials
 </template>
 
 <script>
 import Intro from '@/components/home/Intro.vue'
 import Info from '@/components/home/Info.vue'
 import Skills from '@/components/home/Skills.vue'
+import Socials from '@/components/home/Socials.vue'
 export default {
   components: {
     Intro,
     Info,
-    Skills
+    Skills,
+    Socials
   },
   data () {
     return {
+      options: {
+        navigation: true,
+        navigationTooltips: ['Inicio', 'Conóceme', 'Habilidades', 'Contactamé']
+      },
       intro: {
         bgImage: require('~/assets/imgs/pages/Home/Intro/bg.png')
       }
@@ -40,4 +48,6 @@ export default {
     padding: 0
     margin: 0
     display: flex
+.socials
+  background-color: $color-black
 </style>
