@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import { Pie } from 'vue-chartjs'
+import { Line, Pie } from 'vue-chartjs'
 
 Vue.component('pieChart', { extends: Pie })
+Vue.component('lineChart', { extends: Line })

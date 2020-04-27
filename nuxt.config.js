@@ -24,7 +24,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/stylesheets/base.sass'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -77,8 +78,7 @@ module.exports = {
   */
   styleResources: {
     sass: [
-      '@/assets/stylesheets/variables/*.sass',
-      '@/assets/stylesheets/base.sass'
+      '@/assets/stylesheets/variables/*.sass'
     ]
   },
   /*
