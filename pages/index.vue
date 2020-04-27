@@ -4,7 +4,7 @@
       Intro
     .section.info
       Info
-    .section
+    .section.skills
       Skills
     .section.socials
       Socials
@@ -43,11 +43,14 @@ export default {
   background-repeat: no-repeat
 .info
   height: 100%
-  padding: 0
   .fp-tableCell
     padding: 0
     margin: 0
     display: flex
+.info, .skills, .socials
+  padding: 0
+.skills
+  margin: auto 10px
 .socials
   background-color: $color-black
 </style>

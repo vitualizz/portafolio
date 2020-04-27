@@ -31,6 +31,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/global',
     '@/plugins/element-ui',
     { src: '@/plugins/fullpage', mode: 'client' },
     { src: '@/plugins/chart', mode: 'client' }

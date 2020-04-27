@@ -1,14 +1,14 @@
 <template lang='pug'>
   div.info-container
-    div(v-if="useSlide")
-      .slide.has-text-centered
-        Description
-      .slide.img(":style"="{ backgroundImage: `url(${imageMe})`}")
-    div(v-else)
+    div(v-if="isLandscape()")
       .columns.has-text-centered
         .column
           Description
         .column.img(":style"="{ backgroundImage: `url(${imageMe})`}")
+    div(v-else)
+      .slide.has-text-centered
+        Description
+      .slide.img(":style"="{ backgroundImage: `url(${imageMe})`}")
 </template>
 
 <script>
@@ -20,18 +20,7 @@ export default {
   },
   data () {
     return {
-      imageMe: require('@/assets/imgs/pages/Home/Me/photo.png'),
-      useSlide: Boolean
-    }
-  },
-  created () {
-    if (process.browser) {
-      this.useSlide = this.activeSlide()
-    }
-  },
-  methods: {
-    activeSlide () {
-      return $(window).width() < $(window).height()
+      imageMe: require('@/assets/imgs/pages/Home/Me/photo.png')
     }
   }
 }

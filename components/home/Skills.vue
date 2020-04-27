@@ -1,9 +1,9 @@
 <template lang='pug'>
   .has-text-centered
-    .columns
-      .column
+    div(:class="{ columns: isLandscape() }")
+      div(:class="[ isLandscape() ? 'column' : 'slide' ]")
         LanguagesChart
-      .column
+      div(:class="[ isLandscape() ? 'column' : 'slide' ]")
         CodeActivityChart
 </template>
 
@@ -20,8 +20,9 @@ export default {
 </script>
 
 <style scoped lang='sass'>
-.column
-  &::v-deep .chart
-    width: 70%
-    margin: auto
+@media (min-width: $screen-md-min)
+  .column
+    &::v-deep .chart
+      width: 70%
+      margin: auto
 </style>
