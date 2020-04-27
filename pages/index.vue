@@ -2,6 +2,8 @@
   full-page(ref='fullpage' :options='options')
     .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
       Intro
+    .section.info
+      Info
 </template>
 
 <script>
