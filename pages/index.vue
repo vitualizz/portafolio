@@ -25,6 +25,7 @@ export default {
   data () {
     return {
       options: {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         navigation: true,
         navigationTooltips: ['Inicio', 'Conóceme', 'Habilidades', 'Contactamé']
       },
