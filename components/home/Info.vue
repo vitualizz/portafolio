@@ -1,14 +1,13 @@
 <template lang='pug'>
-  div.info-container
-    div(v-if="isLandscape()")
-      .columns.has-text-centered
-        .column
+  .info-container
+    div
+      .has-text-centered(:class="{ columns: isLandscape() }")
+        div(:class="[ isLandscape() ? 'column' : 'slide has-text-centered' ]")
           Description
-        .column.img(":style"="{ backgroundImage: `url(${imageMe})`}")
-    div(v-else)
-      .slide.has-text-centered
-        Description
-      .slide.img(":style"="{ backgroundImage: `url(${imageMe})`}")
+        .img(
+              ":style"="{ backgroundImage: `url(${imageMe})`}"
+              :class="[ isLandscape() ? 'column' : 'slide' ]"
+            )
 </template>
 
 <script>

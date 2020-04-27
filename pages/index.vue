@@ -4,6 +4,10 @@
       Intro
     .section.info
       Info
+    .section.skills
+      Skills
+    .section.socials
+      Socials
 </template>
 
 <script>
