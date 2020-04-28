@@ -33,7 +33,6 @@ module.exports = {
   plugins: [
     '@/plugins/global',
     '@/plugins/element-ui',
-    { src: '@/plugins/fullpage', mode: 'client' },
     { src: '@/plugins/chart', mode: 'client' }
   ],
   /*
@@ -59,7 +58,7 @@ module.exports = {
     // Devices,
     '@nuxtjs/device',
     // FullPage
-    // 'nuxt-fullpage.js',
+    'nuxt-fullpage.js',
     // Bulma
     '@nuxtjs/bulma',
     // Fonts

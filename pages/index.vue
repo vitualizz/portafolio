@@ -38,6 +38,8 @@ export default {
 </script>
 
 <style scoped lang='sass'>
+.fullpage-wrapper
+  display: block
 .intro
   background-size: cover
   background-position: bottom
