@@ -1,13 +1,14 @@
 <template lang='pug'>
-  full-page(ref='fullpage' :options='options')
-    .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
-      Intro
-    .section.info
-      Info
-    .section.skills
-      Skills
-    .section.socials
-      Socials
+  no-ssr
+    full-page(ref='fullpage' :options='options')
+      .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
+        Intro
+      .section.info
+        Info
+      .section.skills
+        Skills
+      .section.socials
+        Socials
 </template>
 
 <script>
