@@ -36,6 +36,9 @@ export default {
 .skills
   height: 100%
   display: flex
+  align-items: center
+.columns
+  width: 100%
 @media (min-width: $screen-md-min)
   .column, .fp-slide
     &::v-deep .chart
