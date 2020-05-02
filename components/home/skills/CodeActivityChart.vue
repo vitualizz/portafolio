@@ -5,7 +5,8 @@
       | Total de horas codeando:
       | {{ this.totalHours }}
     .chart
-      lineChart(ref="lineChart")
+      no-ssr
+        lineChart(ref="lineChart")
 </template>
 
 <script>

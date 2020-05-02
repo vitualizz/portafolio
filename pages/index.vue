@@ -1,14 +1,13 @@
 <template lang='pug'>
-  no-ssr
-    full-page(ref='fullpage' :options='options')
-      .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
-        Intro
-      .section.info
-        Info
-      .section.skills
-        Skills
-      .section.socials
-        Socials
+  full-page(ref='fullpage' :options='options')
+    .section.intro(":style"="{ backgroundImage: `url(${intro.bgImage})`}")
+      Intro
+    .section.info
+      Info
+    .section.skills
+      Skills
+    .section.socials
+      Socials
 </template>
 
 <script>
@@ -26,7 +25,6 @@ export default {
   data () {
     return {
       options: {
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         navigation: true,
         navigationTooltips: ['Inicio', 'Conóceme', 'Habilidades', 'Contactamé']
       },

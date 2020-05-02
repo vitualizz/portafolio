@@ -25,14 +25,15 @@ module.exports = {
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/stylesheets/base.sass'
+    '@/assets/stylesheets/base.sass',
+    '@/assets/stylesheets/override.sass'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/global',
     '@/plugins/element-ui',
+    { src: '@/plugins/fullpage', mode: 'client' },
     { src: '@/plugins/chart', mode: 'client' }
   ],
   /*
@@ -57,8 +58,6 @@ module.exports = {
     '@nuxtjs/dotenv',
     // Devices,
     '@nuxtjs/device',
-    // FullPage
-    'nuxt-fullpage.js',
     // Bulma
     '@nuxtjs/bulma',
     // Fonts
@@ -94,6 +93,14 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  /*
+  ** Devtools
+  */
+  vue: {
+    config: {
+      devtools: true
+    }
   },
   /*
   ** Build configuration

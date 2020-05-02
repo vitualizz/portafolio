@@ -1,22 +1,31 @@
 <template lang='pug'>
-  .info-container
-    div
-      .has-text-centered(:class="{ columns: isLandscape() }")
-        div(:class="[ isLandscape() ? 'column' : 'slide has-text-centered' ]")
+  .info-container.has-text-centered
+    div(v-if="isPortrait")
+      Slide
+        template(slot='slide')
           Description
-        .img(
-              ":style"="{ backgroundImage: `url(${imageMe})`}"
-              :class="[ isLandscape() ? 'column' : 'slide' ]"
-            )
+      Slide
+        template(slot='slide')
+          .img(":style"="{ backgroundImage: `url(${imageMe})`}")
+    .columns(v-else)
+      .has-text-centered.column
+        Description
+      .img.column(":style"="{ backgroundImage: `url(${imageMe})`}")
 </template>
 
 <script>
+import { Portrait } from '@/mixins/orientation.js'
+import Slide from '@/components/shared/_slide.vue'
 import Description from '@/components/home/info/Description.vue'
 
 export default {
   components: {
+    Slide,
     Description
   },
+  mixins: [
+    Portrait
+  ],
   data () {
     return {
       imageMe: require('@/assets/imgs/pages/Home/Me/photo.png')
@@ -32,13 +41,15 @@ export default {
 .info-container
   height: 100%
   display: flex
-  div
-    width: 100%
-    .columns
+  .fp-slide
+    .img
       height: 100%
-      margin: 0
-      .column
-        display: flex
-        div
-          margin: auto
+  .columns
+    height: 100%
+    width: 100%
+    margin: 0
+    .column
+      display: flex
+      div
+        margin: auto
 </style>

@@ -5,7 +5,8 @@
       | Lenguaje más usado:
       | {{ this.languageMostUse }}
     .chart
-      pieChart(ref="pieChart")
+      no-ssr
+        pieChart(ref="pieChart")
 </template>
 
 <script>
